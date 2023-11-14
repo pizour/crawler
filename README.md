@@ -18,7 +18,7 @@ The python script to recursively gather URLs from publicly available websites
 4. At peak time, the HW/OS resource were reaching its limits: Network 30Mbps, TCP conns 200, mem/cpu intermittenly close to 100percent
 
 ### Lessons learned:
-1. HW/OS resource are a hard limit
+1. HW/OS resources are a hard limit
 2. Python asyncio library can be explored a deeper to tune the script behavior
 3. The script execution may trigger some IPS pattern and be dropped as malicious
 
@@ -28,11 +28,11 @@ The python script to recursively gather URLs from publicly available websites
 3. Re-use TCP connections for URLs with the same destination
 4. Test behavior on resourcefull hardware with tuned OS (file descriptors, tcp reuse, tcp recycle,...)
 5. Build production grade distributed Crawler system
-    a. Brake system into smaller single-functional micro-services
-    b. Build micro-services communication channels (APIs)
-    c. In the beginning, offload 'getting_content' service:
-        - build a scalable getting_content' architecture exposed via API and with L4 loadbalancer layer in front
-        - it can be based on on-prem/public-cloud VMs, container systems or fully serverless (i.e. AWS API gateway/Lambda/SQS)
-    d. If required. other parts of the script can be micro-serviced (i.e. parsing function)
+    - Brake system into smaller single-functional micro-services
+    - Build micro-services communication channels (APIs)
+    - In the beginning, offload 'getting_content' service
+    - build a scalable getting_content' architecture exposed via API and with L4 loadbalancer layer in front
+    - it can be based on on-prem/public-cloud VMs, container systems or fully serverless (i.e. AWS API gateway/Lambda/SQS)
+    - If required. other parts of the script can be micro-serviced (i.e. parsing function)
 6. Improve script output - implement tree view
 7. Migrate script output to suistanable format (i.e. NoSQL db, K/V store)
