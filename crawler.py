@@ -87,7 +87,7 @@ if __name__ == "__main__":
   
   # Format CLI input
   parser = argparse.ArgumentParser(description='Crawler')
-  parser.add_argument('--url', help='input URL', default='https://ipfabric.io/')
+  parser.add_argument('--url', help='input URL')
   args = parser.parse_args()
 
   # Validate input URL

@@ -1,13 +1,18 @@
 ## URL scanning tool CRAWLER
 
 
-The python script to recursively gather URLs from publicly available websites
+The python script code exercise to recursively gather URLs from publicly available websites
 
 ### Schema:
-1. The script requires root URL as an only input (default - hardcoded https://ipfabric.io)
+1. The script requires root URL as an the only input
 2. It scans the returned content and searches for all the URLs
 3. The scanned URLs are used as an input for next iteration of the script
 4. The script should finish once no new URLs are scanned from the fresh content or by hardcoded iteration count
+
+### Usage: From linux CLI
+```
+crawler.py --url https://example.com
+```
 
 
 ### Results:
